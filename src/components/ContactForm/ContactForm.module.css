@@ -1,0 +1,38 @@
+.formWrapper {
+  min-height: 100wh;
+  display: grid;
+  place-content: center;
+  margin-bottom: 40px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0 0 10px 10px lightblue;
+  padding: 15px;
+  & button {
+    border: none;
+    padding: 14px 14px;
+    background-color: rgb(172, 226, 226);
+  }
+}
+
+.form button:hover {
+  color: rgb(155, 230, 167);
+  background-color: rgb(128, 190, 190);
+}
+
+.lable {
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input {
+  box-shadow: 1px 1px 1px 1px lightskyblue;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 10px;
+}

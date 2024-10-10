@@ -1,0 +1,11 @@
+.search {
+  font-weight: bolder;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 50px;
+  & input {
+    border: none;
+    box-shadow: 1px 1px 1px 1px lightskyblue;
+    border-radius: 5px;
+  }
+}
