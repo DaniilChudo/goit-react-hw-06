@@ -11,12 +11,19 @@ const persistConfig = {
 };
 
 const persistedContactsReducer = persistReducer(persistConfig, contactsReducer);
-const persistedFiltersReducer = persistReducer(persistConfig, filtersReducer);
 
-export const store = configureStore({
+const store = configureStore({
   reducer: {
     contacts: persistedContactsReducer,
-    filters: persistedFiltersReducer,
+    filters: filtersReducer,
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: ["persist/PERSIST"],
+      },
+    }),
 });
+
 export const persistor = persistStore(store);
+export default store;
